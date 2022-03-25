@@ -1,6 +1,18 @@
-<h3 align="center">What's this?</h3>
-<h4>This project helps in automatically accepting the LinkedIn connections requests. It uses a selenium to automate the manual behaviour.</h4>
+<h2 align="center">What's this?</h2>
+<h4>This project helps in automatically accepting the LinkedIn connections requests. It has two versions: </h4>
+<li>Javascript based version</li>
+<li>Selenium based version</li>
 
+<h2 align="center">Javascript based version doc</h2>
+<h3 align="center">Prerequisites</h3>
+<li>User should be signedIn on LinkedIn</li>
+
+<h3 align="center">Run</h3>
+<li>Open your LinkedIn account and go to this url <a href="https://www.linkedin.com/mynetwork/invitation-manager/" target="_blank">manage connections</a></li>
+<li>Open the console and run the script given in <code>autoConnectJavaScript.js</code></li>
+
+
+<h2 align="center">Selenium based version doc</h2>
 <h3 align="center">Prerequisites</h3>
 <li>Clone the repo in your local machine</li>
 <li>Run this command inside the project directory: <code>pip install -r requirements.txt</code></li>
