@@ -57,7 +57,7 @@ def main(chrome_driver_path: str):
             all_accept_buttons = driver.find_elements(By.XPATH, XPATH_PATTERN_OF_LINKEDIN_CONNECTION_ACCEPT_BUTTON)
 
             for button in all_accept_buttons:
-                # click all on buttons
+                # click on button
                 button.send_keys(Keys.RETURN)
 
             # Calculate new scroll height and compare with last scroll height
