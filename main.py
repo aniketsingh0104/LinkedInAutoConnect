@@ -53,20 +53,21 @@ def main(chrome_driver_path: str):
                 EC.element_to_be_clickable((By.XPATH,
                                             XPATH_PATTERN_OF_LINKEDIN_CONNECTION_ACCEPT_BUTTON)))
 
-            # Calculate new scroll height and compare with last scroll height
-            new_height = driver.execute_script("return document.body.scrollHeight")
-
-            if new_height == last_height:
-                break
-
-            last_height = new_height
-
             # find all accept buttons
             all_accept_buttons = driver.find_elements(By.XPATH, XPATH_PATTERN_OF_LINKEDIN_CONNECTION_ACCEPT_BUTTON)
 
             for button in all_accept_buttons:
                 # click all on buttons
                 button.send_keys(Keys.RETURN)
+
+            # Calculate new scroll height and compare with last scroll height
+            new_height = driver.execute_script("return document.body.scrollHeight")
+
+            # check if no other request is pending
+            if new_height == last_height:
+                break
+
+            last_height = new_height
 
     finally:
         driver.quit()
