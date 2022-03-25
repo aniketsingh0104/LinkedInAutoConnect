@@ -14,8 +14,10 @@
 
 <h2 align="center">Selenium based version doc</h2>
 <h3 align="center">Prerequisites</h3>
-<li>Clone the repo in your local machine</li>
-<li>Run this command inside the project directory: <code>pip install -r requirements.txt</code></li>
+<li>Clone the repo in your local machine: <code>git clone git@github.com:aniketsingh0104/LinkedInAutoConnect.git</code></li>
+<li>Go to the directory: <code>cd LinkedInAutoConnect</code>. Setup virtual environment: <code>python3 -m venv ./venv</code></li>
+<li>Activate virtual environment: <code>source venv/bin/activate</code></li>
+<li>Run this command inside the project directory to install dependencies: <code>pip install -r requirements.txt</code></li>
 <li>Download chrome driver from here: <a href="https://chromedriver.chromium.org/downloads" target="_blank">link</a></li>
 <li>Inside <code>main.py</code> enter your chromium driver path in this variable <code>driver_path</code></li>
 <li>Make sure that your computer's doesn't sleep while you are running this script.</li>
