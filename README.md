@@ -26,7 +26,11 @@
 <p>The application uses Chrome as the web driver. If you want to use any other browser, make sure you modify the scrip and download appropriate drivers. Below instructions are for chrome although a lot of them would be transferable:</p>
 <li>Download the chrome driver for your Google Chrome Version from chromium drivers: <a href="https://chromedriver.chromium.org/downloads" target="_blank">link</a></li>
 <li>Store it in a location and copy the path.</li>
-<li>On a Mac, for your chrome driver to be allow-listed, fire up the below command on your terminal along with the path to your chrome driver. This is needed to allow the macOS to allow-list the driver and not check for a verified publisher. (<a href="https://stackoverflow.com/a/60374958/3766231">source</a>):</li><code>xattr -d com.apple.quarantine <PATH_OF_DRIVER></code>
+<li>On a Mac, for your chrome driver to be allow-listed, fire up the below command on your terminal along with the path to your chrome driver. This is needed to allow the macOS to allow-list the driver and not check for a verified publisher. (<a href="https://stackoverflow.com/a/60374958/3766231">source</a>):</li>
+
+```
+xattr -d com.apple.quarantine <PATH_OF_DRIVER>
+```
 
 <h3 align="center">Run</h3>
 <li>Go inside the project directory and run: <code>python main.py</code></li>
