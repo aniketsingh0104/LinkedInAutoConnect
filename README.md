@@ -18,9 +18,15 @@
 <li>Go to the directory: <code>cd LinkedInAutoConnect</code>. Setup virtual environment: <code>python3 -m venv ./venv</code></li>
 <li>Activate virtual environment: <code>source venv/bin/activate</code></li>
 <li>Run this command inside the project directory to install dependencies: <code>pip install -r requirements.txt</code></li>
-<li>Download chrome driver from here: <a href="https://chromedriver.chromium.org/downloads" target="_blank">link</a></li>
+<li>For chrome driver see section : <b>Setting up the Selenium Driver</b></li>
 <li>Inside <code>main.py</code> enter your chromium driver path in this variable <code>driver_path</code></li>
 <li>Make sure that your computer's doesn't sleep while you are running this script.</li>
+
+<h3 align="center">Setting up the Selenium Driver</h3>
+<p>The application uses Chrome as the web driver. If you want to use any other browser, make sure you modify the scrip and download appropriate drivers. Below instructions are for chrome although a lot of them would be transferable:</p>
+<li>Download the chrome driver for your Google Chrome Version from chromium drivers: <a href="https://chromedriver.chromium.org/downloads" target="_blank">link</a></li>
+<li>Store it in a location and copy the path.</li>
+<li>On a Mac, for your chrome driver to be allow-listed, fire up the below command on your terminal along with the path to your chrome driver. This is needed to allow the macOS to allow-list the driver and not check for a verified publisher. (<a href="https://stackoverflow.com/a/60374958/3766231">source</a>):</li><code>xattr -d com.apple.quarantine <PATH_OF_DRIVER></code>
 
 <h3 align="center">Run</h3>
 <li>Go inside the project directory and run: <code>python main.py</code></li>
