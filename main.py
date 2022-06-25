@@ -11,7 +11,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from contants import DEFAULT_DRIVER_WAIT, LINKEDIN_INVITATION_MANAGER_URL, SCROLL_PAUSE_TIME, \
-    XPATH_PATTERN_OF_LINKEDIN_CONNECTION_ACCEPT_BUTTON, EXPLICIT_WAIT_FOR_SIGN_IN
+    XPATH_PATTERN_OF_LINKEDIN_CONNECTION_ACCEPT_BUTTON, EXPLICIT_WAIT_FOR_SIGN_IN, REQUEST_ACCEPT_WAIT
 
 
 def _prepare_driver(chrome_driver_path: str):
@@ -59,6 +59,8 @@ def main(chrome_driver_path: str):
             for button in all_accept_buttons:
                 # click on button
                 button.send_keys(Keys.RETURN)
+                # Wait for some time before accepting another request
+                time.sleep(REQUEST_ACCEPT_WAIT)
 
             # Calculate new scroll height and compare with last scroll height
             new_height = driver.execute_script("return document.body.scrollHeight")
