@@ -17,6 +17,9 @@ while (true) {
   for(var i = 0; i < all_accept_buttons.length; i = i + 1) {
     // click on button
     all_accept_buttons[i].click();
+
+    // wait for some time before accepting next request
+    await sleep(500);
   }
 
   // Calculate new scroll height and compare with last scroll height
